@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="theme-color" content="#c9a227">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<title>چراغ راه — گنجینه‌ی حدیث اهل بیت (ع)</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  
+  :root, [data-theme="light"] {
+    --cream: #faf7f0;
+    --cream2: #f5efe2;
+    --white: #ffffff;
+    --gold: #c9a227;
+    --gold2: #e6c34a;
+    --gold3: #8b6f1f;
+    --emerald: #0d6e4f;
+    --emerald2: #14865f;
+    --navy: #1a2332;
+    --text: #2c3441;
+    --muted: #6b7280;
+    --border: rgba(201, 162, 39, 0.25);
+    --border-hover: rgba(201, 162, 39, 0.6);
+    --shadow: 0 10px 40px rgba(26, 35, 50, 0.08);
+    --shadow-hover: 0 20px 60px rgba(26, 35, 50, 0.15);
+    --card-bg: #ffffff;
+    --header-bg: rgba(250, 247, 240, 0.9);
+    --header-bg-scrolled: rgba(250, 247, 240, 0.98);
+    --modal-bg: #faf7f0;
+    --daily-bg: linear-gradient(135deg, #fdfcf7, #f9f3e3);
+    --footer-bg: linear-gradient(180deg, #f5efe2, #efe6d3);
+    --arabic-bg: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(13, 110, 79, 0.05));
+    --story-bg: rgba(255, 255, 255, 0.6);
+    --hero-box-bg: linear-gradient(135deg, #ffffff, #fdfaf0);
+    --pattern-opacity: 0.35;
+  }
+  
+  [data-theme="dark"] {
+    --cream: #0f1520;
+    --cream2: #161d2c;
+    --white: #1a2332;
+    --gold: #d4b44c;
+    --gold2: #e6c34a;
+    --gold3: #c9a227;
+    --emerald: #16a37b;
+    --emerald2: #1fbd8e;
+    --navy: #f1f5f9;
+    --text: #dbe2eb;
+    --muted: #8b9bb4;
+    --border: rgba(212, 180, 76, 0.25);
+    --border-hover: rgba(212, 180, 76, 0.6);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.6);
+    --card-bg: #1a2332;
+    --header-bg: rgba(15, 21, 32, 0.9);
+    --header-bg-scrolled: rgba(15, 21, 32, 0.98);
+    --modal-bg: #0f1520;
+    --daily-bg: linear-gradient(135deg, #1a2332, #161d2c);
+    --footer-bg: linear-gradient(180deg, #161d2c, #0f1520);
+    --arabic-bg: linear-gradient(135deg, rgba(212, 180, 76, 0.1), rgba(22, 163, 123, 0.06));
+    --story-bg: rgba(255, 255, 255, 0.04);
+    --hero-box-bg: linear-gradient(135deg, #1a2332, #161d2c);
+    --pattern-opacity: 0.15;
+  }
+  
+  html { 
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.9;
+    position: relative;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(201, 162, 39, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 75% 75%, rgba(13, 110, 79, 0.04) 0%, transparent 40%);
+    z-index: -2;
+    pointer-events: none;
+    transition: background 0.5s ease;
+  }
+  
+  .pattern-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: var(--pattern-opacity);
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23c9a227' stroke-width='0.4'%3E%3Cpath d='M50 5 L95 50 L50 95 L5 50 Z'/%3E%3Cpath d='M50 25 L75 50 L50 75 L25 50 Z'/%3E%3Ccircle cx='50' cy='50' r='18'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100px 100px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: floatUp linear infinite;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.5; }
+    100% { transform: translateY(-100px) scale(1); opacity: 0; }
+  }
+  
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold3), var(--gold), var(--gold2));
+    z-index: 1000;
+    box-shadow: 0 0 12px rgba(201, 162, 39, 0.6);
+    transition: width 0.1s linear;
+  }
+  
+  /* ========== هدر ========== */
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    padding-top: calc(14px + env(safe-area-inset-top));
+  }
+  header.scrolled {
+    padding: 8px 32px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    background: var(--header-bg-scrolled);
+    box-shadow: 0 4px 30px rgba(26, 35, 50, 0.08);
+  }
+  [data-theme="dark"] header.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo-wrap { display: flex; align-items: center; gap: 12px; }
+  
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gold), var(--gold3));
+    border-radius: 13px;
+    box-shadow: 0 8px 24px rgba(201, 162, 39, 0.35);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+  }
+  .logo-icon svg {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.5s ease;
+  }
+  .logo-wrap:hover .logo-icon {
+    transform: rotate(-6deg) scale(1.08);
+    box-shadow: 0 12px 32px rgba(201, 162, 39, 0.5);
+  }
+  
+  .logo-text h1 {
+    font-size: 19px;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+  .logo-text span {
+    display: block;
+    font-size: 10.5px;
+    color: var(--gold3);
+    margin-top: 1px;
+    font-weight: 500;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1.5px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .theme-toggle:active { transform: scale(0.92); }
+  .theme-toggle:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 20px rgba(201, 162, 39, 0.3);
+  }
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gold3);
+    transition: all 0.4s ease;
+  }
+  .theme-toggle .sun-icon { display: none; }
+  .theme-toggle .moon-icon { display: block; }
+  [data-theme="dark"] .theme-toggle .sun-icon { display: block; }
+  [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+  
+  /* ========== منوی همبرگری ========== */
+  .menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1.5px solid var(--border);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .menu-toggle:active { transform: scale(0.92); }
+  .menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    color: var(--gold3);
+    transition: transform 0.3s ease;
+  }
+  .menu-toggle.open svg { transform: rotate(90deg); }
+  
+  /* منوی موبایل */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 85vw;
+    background: var(--modal-bg);
+    z-index: 2000;
+    padding: 90px 30px 30px;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    border-left: 2px solid var(--gold);
+    overflow-y: auto;
+  }
+  .mobile-menu.open { transform: translateX(0); }
+  
+  .mobile-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  .mobile-menu a:active,
+  .mobile-menu a:hover {
+    background: rgba(201, 162, 39, 0.1);
+    color: var(--gold3);
+    border-color: var(--border);
+  }
+  .mobile-menu a svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 35, 50, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+  }
+  .mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* منوی دسکتاپ */
+  .desktop-nav { display: flex; gap: 4px; align-items: center; }
+  .desktop-nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14.5px;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .desktop-nav a:hover {
+    color: var(--gold3);
+    background: rgba(201, 162, 39, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  /* ========== هیرو ========== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-decoration {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .hero-decoration.top-right { top: 10%; right: 3%; animation: float 8s ease-in-out infinite; }
+  .hero-decoration.bottom-left { bottom: 10%; left: 3%; animation: float 10s ease-in-out infinite reverse; }
+  .hero-decoration svg { width: 100%; height: 100%; }
+  .hero-decoration path, .hero-decoration circle, .hero-decoration line {
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.5;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(10deg); }
+  }
+  
+  .hero-box {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: var(--hero-box-bg);
+    border: 2px solid var(--gold);
+    border-radius: 32px;
+    padding: 60px 50px;
+    text-align: center;
+    box-shadow: 
+      0 30px 80px rgba(201, 162, 39, 0.15),
+      0 10px 30px rgba(26, 35, 50, 0.08);
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+  }
+  [data-theme="dark"] .hero-box {
+    box-shadow: 
+      0 30px 80px rgba(212, 180, 76, 0.1),
+      0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  @keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  
+  .hero-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold2), var(--gold), transparent);
+    background-size: 200% 100%;
+    animation: shimmerLine 4s linear infinite;
+  }
+  @keyframes shimmerLine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  .hero-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--gold);
+    opacity: 0.5;
+  }
+  .hero-corner.tl { top: 12px; left: 12px; border-right: none; border-bottom: none; border-radius: 12px 0 0 0; }
+  .hero-corner.tr { top: 12px; right: 12px; border-left: none; border-bottom: none; border-radius: 0 12px 0 0; }
+  .hero-corner.bl { bottom: 12px; left: 12px; border-right: none; border-top: none; border-radius: 0 0 0 12px; }
+  .hero-corner.br { bottom: 12px; right: 12px; border-left: none; border-top: none; border-radius: 0 0 12px 0; }
+  
+  .bismillah {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    color: var(--gold3);
+    font-weight: 700;
+    line-height: 1.8;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.5px;
+    transition: color 0.5s ease;
+  }
+  
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 26px;
+  }
+  .hero-divider::before, .hero-divider::after {
+    content: '';
+    flex: 1;
+    max-width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero-divider-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .hero-divider-icon svg { width: 100%; height: 100%; }
+  
+  .hero-title {
+    font-size: clamp(32px, 5.5vw, 60px);
+    font-weight: 900;
+    line-height: 1.4;
+    color: var(--navy);
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    transition: color 0.5s ease;
+  }
+  .hero-title .gold {
+    color: var(--gold3);
+    position: relative;
+    display: inline-block;
+  }
+  .hero-title .gold::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    left: 0;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.35), transparent);
+    z-index: -1;
+    border-radius: 5px;
+  }
+  
+  .hero-desc {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 2.2;
+    margin: 0 auto 32px;
+    transition: color 0.5s ease;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 15px 32px;
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 50px;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--emerald), var(--emerald2));
+    color: white;
+    box-shadow: 0 12px 32px rgba(13, 110, 79, 0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 44px rgba(13, 110, 79, 0.45);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold3);
+    border: 2px solid var(--gold);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.15);
+  }
+  .btn-secondary:hover {
+    background: var(--gold);
+    color: white;
+    transform: translateY(-4px);
+  }
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+  .btn:hover::before { transform: translateX(100%); }
+  
+  /* ========== جداکننده ========== */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    max-width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .divider-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .divider-icon svg { width: 100%; height: 100%; }
+  
+  /* ========== بخش‌ها ========== */
+  .section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .section-title h2 {
+    font-size: clamp(24px, 3.8vw, 38px);
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 10px;
+    display: inline-block;
+    letter-spacing: -0.5px;
+  }
+  .section-title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 14px auto 0;
+    border-radius: 2px;
+  }
+  .section-title p { color: var(--muted); font-size: 14.5px; }
+  
+  /* ========== حدیث روز ========== */
+  .daily-section {
+    background: var(--daily-bg);
+    border: 2px solid var(--gold);
+    border-radius: 28px;
+    padding: 55px 45px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(201, 162, 39, 0.15);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  [data-theme="dark"] .daily-section {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+  .daily-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  
+  .daily-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold3));
+    color: white;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35);
+  }
+  .daily-label svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+  }
+  
+  .daily-text {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    font-size: clamp(20px, 2.8vw, 28px);
+    line-height: 2.6;
+    color: var(--navy);
+    margin-bottom: 22px;
+    font-weight: 700;
+    padding: 16px 20px;
+    text-rendering: optimizeLegibility;
+    word-spacing: 3px;
+    transition: color 0.5s ease;
+  }
+  
+  .daily-translation {
+    color: var(--text);
+    font-size: 15.5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 2.1;
+    padding: 0 20px;
+    transition: color 0.5s ease;
+  }
+  
+  .daily-source {
+    color: var(--gold3);
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--border);
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  /* ========== ابزار ========== */
+  .toolbar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-wrap {
+    flex: 1;
+    min-width: 240px;
+    max-width: 500px;
+    position: relative;
+  }
+  .search-wrap input {
+    width: 100%;
+    padding: 14px 48px 14px 20px;
+    border: 2px solid var(--border);
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 16px;
+    background: var(--card-bg);
+    color: var(--text);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    outline: none;
+    min-height: 50px;
+  }
+  .search-wrap input::placeholder { color: var(--muted); }
+  .search-wrap input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.15);
+  }
+  .search-wrap svg {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--muted);
+    pointer-events: none;
+  }
+  
+  .random-btn {
+    padding: 14px 22px;
+    background: linear-gradient(135deg, var(--gold), var(--gold3));
+    color: white;
+    border: none;
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 24px rgba(201, 162, 39, 0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
+    min-height: 50px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .random-btn:active { transform: scale(0.97); }
+  .random-btn svg { width: 18px; height: 18px; }
+  .random-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 32px rgba(201, 162, 39, 0.5);
+  }
+  
+  /* ========== موضوعات ========== */
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  
+  .category {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    padding: 18px 12px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 100px;
+  }
+  .category:active { transform: scale(0.97); }
+  .category:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(201, 162, 39, 0.2);
+  }
+  .category.active {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--gold), var(--gold3));
+    color: white;
+    box-shadow: 0 12px 32px rgba(201, 162, 39, 0.4);
+  }
+  .category.active * { color: white !important; }
+  
+  .category-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold3);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .category-icon svg { width: 100%; height: 100%; }
+  .category:hover .category-icon { transform: scale(1.15) rotate(-5deg); }
+  
+  .category h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .category .cat-count {
+    font-size: 11.5px;
+    color: var(--muted);
+    display: block;
+  }
+  
+  /* ========== نتایج ========== */
+  .results-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: var(--card-bg);
+    border-radius: 13px;
+    border: 1px solid var(--border);
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .results-bar p { color: var(--muted); font-size: 13.5px; }
+  .results-bar strong { color: var(--gold3); font-weight: 700; }
+  
+  /* ========== کارت‌های حدیث ========== */
+  .hadith-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+    min-height: 200px;
+  }
+  
+  .hadith-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 26px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: var(--shadow);
+    animation: cardFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hadith-card:active { transform: scale(0.98); }
+  @keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .hadith-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold2), var(--gold));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hadith-card:hover::before { transform: scaleX(1); }
+  .hadith-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-6px);
+  }
+  
+  .hadith-cat-badge {
+    display: inline-block;
+    background: rgba(201, 162, 39, 0.12);
+    color: var(--gold3);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    align-self: flex-start;
+  }
+  
+  .hadith-quote {
+    font-family: 'Amiri', serif;
+    font-size: 48px;
+    color: var(--gold);
+    line-height: 0.8;
+    margin-bottom: 12px;
+    opacity: 0.3;
+    font-weight: 700;
+  }
+  
+  .hadith-text {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    font-size: 20px;
+    line-height: 2.9;
+    color: var(--navy);
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    word-spacing: 3px;
+    padding: 10px 6px;
+    transition: color 0.5s ease;
+  }
+  
+  .hadith-translation {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text);
+    margin-bottom: 18px;
+    flex: 1;
+    transition: color 0.5s ease;
+  }
+  
+  .hadith-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+    color: var(--gold3);
+    font-weight: 600;
+    font-size: 13px;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  .hadith-source-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    overflow: hidden;
+  }
+  .hadith-source-text svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .hadith-source-text span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--emerald);
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  
+  .empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-size: 16px;
+  }
+  
+  /* ========== مودال ========== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 35, 50, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.4s;
+  }
+  .modal-overlay.open { opacity: 1; visibility: visible; }
+  
+  .modal {
+    background: var(--modal-bg);
+    border-radius: 24px;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9) translateY(30px);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.5s ease;
+    border: 2px solid var(--gold);
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-overlay.open .modal { transform: scale(1) translateY(0); }
+  
+  .modal-header {
+    padding: 26px 32px 18px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--modal-bg);
+    z-index: 10;
+    border-radius: 22px 22px 0 0;
+    transition: background 0.5s ease;
+  }
+  .modal-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .modal-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.12), rgba(13, 110, 79, 0.08));
+    color: var(--gold3);
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 12.5px;
+    font-weight: 700;
+    border: 1px solid var(--border);
+  }
+  
+  .modal-close {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(201, 162, 39, 0.1);
+    border: none;
+    color: var(--gold3);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    font-family: inherit;
+    font-weight: 900;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .modal-close:active { transform: scale(0.9); }
+  .modal-close:hover {
+    background: var(--gold);
+    color: white;
+    transform: rotate(90deg);
+  }
+  
+  .modal-body { padding: 26px 32px 36px; }
+  
+  .modal-arabic {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    font-size: clamp(21px, 2.8vw, 27px);
+    line-height: 3;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 26px;
+    padding: 30px 26px;
+    background: var(--arabic-bg);
+    border-radius: 18px;
+    border-right: 5px solid var(--gold);
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    word-spacing: 4px;
+    transition: color 0.5s ease, background 0.5s ease;
+  }
+  
+  .modal-section { margin-bottom: 24px; }
+  .modal-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold3);
+    font-size: 14.5px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .modal-section-title svg {
+    width: 14px;
+    height: 14px;
+    color: var(--gold);
+  }
+  
+  .modal-translation {
+    font-size: 15.5px;
+    line-height: 2.2;
+    color: var(--text);
+    font-weight: 500;
+    padding: 4px 8px;
+    transition: color 0.5s ease;
+  }
+  
+  .modal-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(201, 162, 39, 0.1);
+    color: var(--gold3);
+    padding: 11px 18px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+  .modal-source svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .modal-story {
+    font-size: 14.5px;
+    line-height: 2.2;
+    color: var(--text);
+    background: var(--story-bg);
+    padding: 22px 24px;
+    border-radius: 14px;
+    border: 1px dashed var(--border);
+    transition: color 0.5s ease, background 0.5s ease;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 12px 18px;
+    border-radius: 11px;
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    color: white;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+  }
+  .action-btn:active { transform: scale(0.95); }
+  .action-btn svg { width: 15px; height: 15px; }
+  .action-copy { background: linear-gradient(135deg, #475569, #334155); }
+  .action-bale { background: linear-gradient(135deg, #16a34a, #15803d); }
+  .action-telegram { background: linear-gradient(135deg, #0088cc, #006699); }
+  .action-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); }
+  .action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .modal-nav button {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: var(--gold3);
+    border: 2px solid var(--gold);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    -webkit-tap-highlight-color: transparent;
+    min-height: 48px;
+  }
+  .modal-nav button:active:not(:disabled) { transform: scale(0.96); }
+  .modal-nav button:hover:not(:disabled) {
+    background: var(--gold);
+    color: white;
+  }
+  .modal-nav button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  /* ========== فوتر ========== */
+  footer {
+    background: var(--footer-bg);
+    padding: 55px 20px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    position: relative;
+    transition: background 0.5s ease;
+    padding-bottom: calc(30px + env(safe-area-inset-bottom));
+  }
+  
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .footer-logo svg {
+    width: 28px;
+    height: 28px;
+    color: var(--gold);
+  }
+  
+  .footer-tagline {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    font-size: 18px;
+    color: var(--gold3);
+    margin-bottom: 22px;
+    font-weight: 700;
+    line-height: 2.4;
+    padding: 8px 0;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .footer-text { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  
+  .footer-note {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 22px;
+    background: rgba(201, 162, 39, 0.08);
+    border: 1px dashed var(--gold);
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--gold3);
+    line-height: 2;
+    max-width: 700px;
+  }
+  
+  #back-to-top {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold3));
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4);
+    opacity: 0;
+    transform: translateY(80px) scale(0.6);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    -webkit-tap-highlight-color: transparent;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  #back-to-top.show { opacity: 1; transform: translateY(0) scale(1); }
+  #back-to-top:active { transform: scale(0.9); }
+  #back-to-top:hover {
+    transform: translateY(-6px) scale(1.1) rotate(-10deg);
+    box-shadow: 0 16px 42px rgba(201, 162, 39, 0.6);
+  }
+  #back-to-top svg { width: 20px; height: 20px; }
+  
+  /* ============================================
+     ============ موبایل و تبلت ============
+     ============================================ */
+  
+  /* تبلت */
+  @media (max-width: 900px) {
+    header { padding: 12px 20px; padding-top: calc(12px + env(safe-area-inset-top)); }
+    header.scrolled { padding: 8px 20px; padding-top: calc(8px + env(safe-area-inset-top)); }
+    
+    .section { padding: 50px 20px; }
+    .hero { padding: 110px 16px 50px; }
+    .hero-box { padding: 50px 35px; }
+  }
+  
+  /* موبایل */
+  @media (max-width: 640px) {
+    /* هدر */
+    header { padding: 10px 14px; padding-top: calc(10px + env(safe-area-inset-top)); }
+    header.scrolled { padding: 8px 14px; padding-top: calc(8px + env(safe-area-inset-top)); }
+    
+    .desktop-nav { display: none; }
+    .menu-toggle { display: flex; }
+    
+    .logo-icon { width: 42px; height: 42px; border-radius: 11px; }
+    .logo-icon svg { width: 24px; height: 24px; }
+    .logo-text h1 { font-size: 16.5px; }
+    .logo-text span { font-size: 9.5px; }
+    
+    .theme-toggle { width: 40px; height: 40px; }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    
+    .header-actions { gap: 6px; }
+    
+    /* هیرو */
+    .hero { 
+      padding: 90px 12px 40px; 
+      min-height: auto;
+    }
+    .hero-box { 
+      padding: 36px 20px; 
+      border-radius: 22px;
+    }
+    .hero-corner { width: 24px; height: 24px; border-width: 1.5px; }
+    .hero-corner.tl { top: 8px; left: 8px; border-radius: 8px 0 0 0; }
+    .hero-corner.tr { top: 8px; right: 8px; border-radius: 0 8px 0 0; }
+    .hero-corner.bl { bottom: 8px; left: 8px; border-radius: 0 0 0 8px; }
+    .hero-corner.br { bottom: 8px; right: 8px; border-radius: 0 0 8px 0; }
+    
+    .bismillah { 
+      font-size: 18px; 
+      line-height: 1.9;
+      padding: 6px 4px;
+      margin-bottom: 18px;
+      letter-spacing: 0.2px;
+    }
+    .hero-divider { margin-bottom: 20px; gap: 10px; }
+    .hero-divider::before, .hero-divider::after { max-width: 50px; }
+    .hero-divider-icon { width: 20px; height: 20px; }
+    
+    .hero-title { 
+      font-size: 26px; 
+      line-height: 1.5; 
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .hero-title .gold::after { height: 7px; bottom: 3px; }
+    
+    .hero-desc { 
+      font-size: 13.5px; 
+      line-height: 2.1;
+      margin-bottom: 24px;
+    }
+    
+    .hero-buttons { gap: 10px; width: 100%; }
+    .btn { 
+      padding: 14px 24px; 
+      font-size: 14px;
+      flex: 1;
+      min-width: 140px;
+      justify-content: center;
+      min-height: 52px;
+    }
+    
+    .hero-decoration { width: 140px; height: 140px; opacity: 0.08; }
+    
+    /* جداکننده */
+    .divider { padding: 24px 20px; }
+    .divider-icon { width: 26px; height: 26px; }
+    
+    /* بخش‌ها */
+    .section { padding: 40px 14px; }
+    
+    .section-title { margin-bottom: 30px; }
+    .section-title h2 { font-size: 22px; }
+    .section-title h2::after { width: 50px; }
+    .section-title p { font-size: 13px; }
+    
+    /* حدیث روز */
+    .daily-section { 
+      padding: 32px 18px; 
+      border-radius: 20px;
+      border-width: 1.5px;
+    }
+    .daily-label {
+      font-size: 12px;
+      padding: 7px 18px;
+      margin-bottom: 20px;
+    }
+    .daily-label svg { width: 14px; height: 14px; }
+    .daily-text { 
+      font-size: 18px; 
+      line-height: 2.8;
+      padding: 12px 6px;
+      margin-bottom: 16px;
+      word-spacing: 2px;
+    }
+    .daily-translation { 
+      font-size: 14px; 
+      line-height: 2.1;
+      padding: 0 6px;
+      margin-bottom: 16px;
+    }
+    .daily-source { font-size: 13px; padding-top: 14px; }
+    
+    /* ابزار */
+    .toolbar { 
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .search-wrap { 
+      width: 100%;
+      max-width: none;
+      min-width: auto;
+    }
+    .search-wrap input {
+      font-size: 16px;
+      padding: 13px 44px 13px 16px;
+      min-height: 50px;
+    }
+    .search-wrap svg { width: 18px; height: 18px; right: 14px; }
+    .random-btn { 
+      width: 100%;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 20px;
+    }
+    
+    /* موضوعات */
+    .categories {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .category {
+      padding: 14px 8px;
+      border-radius: 13px;
+      min-height: 92px;
+    }
+    .category-icon {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 8px;
+    }
+    .category h3 { font-size: 12.5px; }
+    .category .cat-count { font-size: 10.5px; }
+    
+    /* نتایج */
+    .results-bar {
+      padding: 12px 16px;
+      font-size: 12.5px;
+      flex-direction: column;
+      text-align: center;
+      gap: 4px;
+    }
+    .results-bar p { font-size: 12.5px; }
+    
+    /* کارت‌ها */
+    .hadith-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .hadith-card {
+      padding: 22px 18px;
+      border-radius: 16px;
+    }
+    .hadith-quote { font-size: 38px; margin-bottom: 6px; }
+    .hadith-text {
+      font-size: 17.5px;
+      line-height: 3;
+      padding: 10px 2px;
+      margin-bottom: 12px;
+      word-spacing: 1px;
+    }
+    .hadith-translation {
+      font-size: 14px;
+      line-height: 2;
+      margin-bottom: 16px;
+    }
+    .hadith-source {
+      font-size: 12px;
+      padding-top: 12px;
+      gap: 6px;
+    }
+    .hadith-source-text { gap: 6px; }
+    .hadith-source-text svg { width: 14px; height: 14px; }
+    .read-btn { font-size: 11.5px; }
+    
+    /* مودال - تمام صفحه */
+    .modal-overlay {
+      padding: 0;
+      align-items: flex-end;
+    }
+    .modal {
+      max-height: 95vh;
+      border-radius: 24px 24px 0 0;
+      border-bottom: none;
+      transform: translateY(100%);
+    }
+    .modal-overlay.open .modal { 
+      transform: translateY(0);
+    }
+    .modal-header {
+      padding: 18px 18px 14px;
+      border-radius: 24px 24px 0 0;
+    }
+    .modal-cat { font-size: 11.5px; padding: 6px 12px; }
+    .modal-close { width: 38px; height: 38px; font-size: 18px; }
+    
+    .modal-body { padding: 20px 18px 30px; }
+    
+    .modal-arabic {
+      font-size: 18px;
+      line-height: 3;
+      padding: 20px 16px;
+      margin-bottom: 22px;
+      border-right-width: 4px;
+      word-spacing: 2px;
+    }
+    
+    .modal-section { margin-bottom: 20px; }
+    .modal-section-title { font-size: 13.5px; margin-bottom: 10px; }
+    .modal-translation { font-size: 14.5px; line-height: 2.1; padding: 2px 4px; }
+    .modal-source { font-size: 12.5px; padding: 10px 14px; }
+    .modal-story { font-size: 13.5px; padding: 16px 18px; }
+    
+    .modal-actions { gap: 8px; margin-top: 22px; padding-top: 18px; }
+    .action-btn { 
+      padding: 11px 14px; 
+      font-size: 12px;
+      flex: 1 1 calc(50% - 4px);
+      min-height: 46px;
+    }
+    
+    .modal-nav { margin-top: 14px; gap: 8px; }
+    .modal-nav button { 
+      font-size: 12.5px; 
+      padding: 12px 10px;
+      min-height: 48px;
+    }
+    
+    /* فوتر */
+    footer { 
+      padding: 40px 16px 24px;
+      padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+    .footer-logo { font-size: 17px; }
+    .footer-logo svg { width: 24px; height: 24px; }
+    .footer-tagline { 
+      font-size: 15px; 
+      line-height: 2.3;
+      padding: 6px 4px;
+    }
+    .footer-text { font-size: 12px; }
+    .footer-note { 
+      font-size: 11px; 
+      padding: 10px 14px;
+      line-height: 1.9;
+    }
+    
+    /* دکمه بالا */
+    #back-to-top {
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      left: 16px;
+      width: 46px;
+      height: 46px;
+    }
+    #back-to-top svg { width: 18px; height: 18px; }
+    
+    /* منوی موبایل */
+    .mobile-menu { 
+      width: 260px;
+      padding: 80px 22px 30px;
+      padding-top: calc(80px + env(safe-area-inset-top));
+      padding-bottom: calc(30px + env(safe-area-inset-bottom));
+    }
+    .mobile-menu a {
+      font-size: 14.5px;
+      padding: 15px 16px;
+      min-height: 52px;
+    }
+  }
+  
+  /* موبایل‌های خیلی کوچیک */
+  @media (max-width: 380px) {
+    .hero-title { font-size: 22px; }
+    .bismillah { font-size: 16px; }
+    .daily-text { font-size: 16px; }
+    .hadith-text { font-size: 16px; }
+    .modal-arabic { font-size: 17px; }
+    .logo-text h1 { font-size: 15px; }
+    .logo-text span { font-size: 9px; }
+    .btn { font-size: 13px; padding: 12px 18px; }
+    .categories { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .category h3 { font-size: 11.5px; }
+  }
+  
+  /* افقی روی موبایل */
+  @media (max-width: 900px) and (orientation: landscape) {
+    .hero { min-height: auto; padding: 90px 16px 40px; }
+    .hero-box { padding: 30px 25px; }
+    .hero-title { font-size: 28px; }
+    .modal { max-height: 92vh; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* حالت لمس - بدون hover */
+  @media (hover: none) {
+    .hadith-card:hover { transform: none; }
+    .category:hover { transform: none; }
+    .btn:hover { transform: none; }
+    .logo-wrap:hover .logo-icon { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pattern-overlay"></div>
+<div class="particles" id="particles"></div>
+<div id="progress-bar"></div>
+
+<header id="header">
+  <div class="logo-wrap">
+    <div class="logo-icon">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="white" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M20 3 L37 20 L20 37 L3 20 Z" fill="rgba(255,255,255,0.15)"/>
+          <path d="M20 8 L32 20 L20 32 L8 20 Z"/>
+          <circle cx="20" cy="20" r="6" fill="white" fill-opacity="0.9"/>
+        </g>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <h1>چراغ راه</h1>
+      <span>گنجینه‌ی حدیث اهل بیت (علیهم السلام)</span>
+    </div>
+  </div>
+  
+  <div class="header-actions">
+    <nav class="desktop-nav">
+      <a href="#home">خانه</a>
+      <a href="#hadiths">احادیث</a>
+    </nav>
+    
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+    
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="منو">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- منوی موبایل -->
+<div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>
+    خانه
+  </a>
+  <a href="#hadiths" onclick="closeMenu()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    احادیث
+  </a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-decoration top-right">
+    <svg viewBox="0 0 100 100">
+      <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+      <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+      <circle cx="50" cy="50" r="15"/>
+      <line x1="50" y1="5" x2="50" y2="95"/>
+      <line x1="5" y1="50" x2="95" y2="50"/>
+    </svg>
+  </div>
+  <div class="hero-decoration bottom-left">
+    <svg viewBox="0 0 100 100">
+      <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+      <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+      <circle cx="50" cy="50" r="15"/>
+    </svg>
+  </div>
+  
+  <div class="hero-box">
+    <span class="hero-corner tl"></span>
+    <span class="hero-corner tr"></span>
+    <span class="hero-corner bl"></span>
+    <span class="hero-corner br"></span>
+    
+    <div class="bismillah">بسم الله الرحمن الرحیم</div>
+    
+    <div class="hero-divider">
+      <div class="hero-divider-icon">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M20 4 L36 20 L20 36 L4 20 Z"/>
+          <path d="M20 12 L28 20 L20 28 L12 20 Z"/>
+          <circle cx="20" cy="20" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+    
+    <h1 class="hero-title">
+      گنجینه‌ای از <span class="gold">کلام نورانی</span><br>
+      اهل بیت (ع)
+    </h1>
+    
+    <p class="hero-desc">
+      احادیث گهربار اهل بیت عصمت و طهارت، چراغ راه زندگی ما در مسیر بندگی خداوند متعال است. اینجا گزیده‌ای از این گنجینه‌ی بی‌پایان را با ذکر منبع و شأن صدور گرد آورده‌ایم.
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="#hadiths" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+        مطالعه احادیث
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="divider-icon">
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M20 4 L36 20 L20 36 L4 20 Z"/>
+      <path d="M20 12 L28 20 L20 28 L12 20 Z"/>
+      <circle cx="20" cy="20" r="3" fill="currentColor"/>
+    </svg>
+  </div>
+</div>
+
+<section class="section">
+  <div class="daily-section">
+    <div class="daily-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      حدیث امروز
+    </div>
+    <div class="daily-text" id="dailyText">در حال بارگذاری...</div>
+    <p class="daily-translation" id="dailyTrans"></p>
+    <div class="daily-source" id="dailySrc"></div>
+  </div>
+</section>
+
+<section class="section" id="hadiths">
+  <div class="section-title">
+    <h2>گنجینه‌ی احادیث</h2>
+    <p>روی هر حدیث کلیک کنید تا منبع و شأن صدور آن را ببینید</p>
+  </div>
+  
+  <div class="toolbar">
+    <div class="search-wrap">
+      <input type="text" id="searchBox" placeholder="جستجو در متن احادیث...">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </div>
+    <button class="random-btn" onclick="showRandomHadith()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <circle cx="15.5" cy="15.5" r="1.5"/>
+        <circle cx="15.5" cy="8.5" r="1.5"/>
+        <circle cx="8.5" cy="15.5" r="1.5"/>
+      </svg>
+      حدیث تصادفی
+    </button>
+  </div>
+  
+  <div class="categories" id="categories"></div>
+  
+  <div class="results-bar">
+    <p id="resultsText">در حال بارگذاری...</p>
+  </div>
+  
+  <div class="hadith-grid" id="hadithGrid"></div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+      <path d="M20 4 L36 20 L20 36 L4 20 Z"/>
+      <path d="M20 12 L28 20 L20 28 L12 20 Z"/>
+    </svg>
+    چراغ راه
+  </div>
+  <div class="footer-tagline">«وَ ما اَرْسَلْناکَ اِلاّ رَحْمَةً لِلْعالَمینَ»</div>
+  <p class="footer-text">© ۱۴۰۴ — همه‌ی حقوق برای خداوند متعال است</p>
+  <div class="footer-note">
+    ⚠️ توجه: منابع و شأن صدور احادیث با تلاش فراوان از منابع معتبر گردآوری شده، اما برای انتشار عمومی حتماً با یک عالم دینی یا منبع معتبر (مانند وسائل الشیعة، بحارالانوار، الکافی) بازبینی کنید.
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <div class="modal-header-inner">
+        <div class="modal-cat" id="modalCat">—</div>
+        <button class="modal-close" onclick="closeModal()" aria-label="بستن">✕</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-arabic" id="modalArabic"></div>
+      
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>
+          ترجمه
+        </div>
+        <div class="modal-translation" id="modalTranslation"></div>
+      </div>
+      
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>
+          منبع
+        </div>
+        <div class="modal-source" id="modalSource"></div>
+      </div>
+      
+      <div class="modal-section" id="modalStorySection">
+        <div class="modal-section-title">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"/></svg>
+          شأن صدور / داستان
+        </div>
+        <div class="modal-story" id="modalStory"></div>
+      </div>
+      
+      <div class="modal-actions">
+        <button class="action-btn action-copy" onclick="copyCurrentHadith()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          کپی
+        </button>
+        <button class="action-btn action-bale" onclick="shareCurrentHadith('bale')">📢 بله</button>
+        <button class="action-btn action-telegram" onclick="shareCurrentHadith('telegram')">✈️ تلگرام</button>
+        <button class="action-btn action-whatsapp" onclick="shareCurrentHadith('whatsapp')">💬 واتساپ</button>
+      </div>
+      
+      <div class="modal-nav">
+        <button id="prevBtn" onclick="navigateHadith(-1)">→ قبلی</button>
+        <button id="nextBtn" onclick="navigateHadith(1)">بعدی ←</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button id="back-to-top" onclick="scrollToTop()" aria-label="بازگشت به بالا">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<script>
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  try { localStorage.setItem('chiragh-theme', theme); } catch(e) {}
+}
+function toggleTheme() {
+  var current = document.documentElement.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}
+(function initTheme() {
+  try {
+    var saved = localStorage.getItem('chiragh-theme');
+    if (saved) setTheme(saved);
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+  } catch(e) {}
+})();
+
+// منوی موبایل
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var overlay = document.getElementById('menuOverlay');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    btn.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('menuOverlay').classList.remove('open');
+  document.getElementById('menuToggle').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+var hadiths = [
+  { cat:'توحید و ایمان', text:'لا إلهَ إلاّ اللهُ حِصْنی، فَمَنْ دَخَلَ حِصْنی أمِنَ مِنْ عَذابی', trans:'کلمه‌ی «لا اله الا الله» دژ محکم من است؛ پس هر کس در دژ من وارد شود، از عذابم در امان می‌ماند.', src:'پیامبر اکرم (ص) — التوحید، شیخ صدوق، ص ۲۵', story:'این حدیث در منابع شیعه و سنی نقل شده و از مشهورترین احادیث توحیدی است. پیامبر اکرم (ص) این سخن را در پاسخ به کسی فرمودند که از راه رستگاری پرسید. تأکید این حدیث بر توحید خالص و ایمان راستین است.' },
+  { cat:'توحید و ایمان', text:'أَوَّلُ الدِّینِ مَعْرِفَتُهُ', trans:'سرآغاز دین، شناخت (خداوند) است.', src:'امام علی (ع) — نهج البلاغه، حکمت', story:'امام علی (ع) در بیانات خود بارها بر اهمیت شناخت خداوند تأکید کرده‌اند. این جمله کوتاه، پایه‌ی تمام معارف دینی را معرفت به خداوند می‌داند.' },
+  { cat:'توحید و ایمان', text:'إِنَّ اللهَ جَمیلٌ یُحِبُّ الْجَمالَ', trans:'همانا خداوند زیباست و زیبایی را دوست می‌دارد.', src:'پیامبر اکرم (ص) — الکافی، ج ۶، ص ۴۳۸', story:'این حدیث در پاسخ به کسی نقل شده که از نظافت و آراستگی پرسید. پیامبر (ص) فرمودند خداوند زیباست و زیبایی را دوست دارد.' },
+  { cat:'توحید و ایمان', text:'مَنْ ماتَ وَ لَمْ یَعْرِفْ إِمامَ زَمانِهِ ماتَ میتَةً جاهِلِیَّةً', trans:'هر کس بمیرد و امام زمان خود را نشناسد، به مرگ جاهلیت مرده است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۳۲، ص ۳۳۱', story:'این حدیث متواتر بر ضرورت معرفت به امام زمان (ع) تأکید می‌کند. مراد از «مرگ جاهلیت»، مرگ در بی‌خبری و گمراهی است.' },
+  { cat:'توحید و ایمان', text:'اَلْمُؤْمِنُ الْقَوِیُّ خَیْرٌ وَ أَحَبُّ إِلَى اللهِ مِنَ الْمُؤْمِنِ الضَّعیفِ', trans:'مؤمن قوی و نیرومند، بهتر و محبوب‌تر نزد خداوند از مؤمن ضعیف است.', src:'پیامبر اکرم (ص) — صحیح مسلم و الکافی', story:'پیامبر اکرم (ص) این سخن را در توصیه به مسلمانان فرمودند که نه تنها در ایمان، بلکه در جسم و توان نیز باید قوی باشند.' },
+  { cat:'توحید و ایمان', text:'اَلْإِیمانُ مَعْرِفَةٌ بِالْقَلْبِ وَ قَوْلٌ بِاللِّسانِ وَ عَمَلٌ بِالْأَرْکانِ', trans:'ایمان، شناخت با قلب و گفتار با زبان و عمل با اعضا و جوارح است.', src:'امام صادق (ع) — الکافی، ج ۲، ص ۲۷', story:'این حدیث، تعریف جامعی از ایمان حقیقی ارائه می‌دهد. ایمان صرفاً یک امر قلبی نیست، بلکه باید در زبان و عمل نیز تجلی یابد.' },
+  { cat:'نماز و عبادت', text:'اَلصَّلاةُ عِمادُ الدِّینِ', trans:'نماز، ستون دین است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۸۲، ص ۲۱۸', story:'پیامبر اکرم (ص) این جمله را در تفسیر آیه‌ی «أَقِمِ الصَّلاةَ» فرمودند. همان‌طور که خیمه بدون ستون برپا نمی‌ماند، دین نیز بدون نماز استوار نمی‌شود.' },
+  { cat:'نماز و عبادت', text:'اَلصَّلاةُ مِعْراجُ الْمُؤْمِنِ', trans:'نماز، معراج مؤمن است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۷۹، ص ۲۴۸', story:'در شب معراج، پیامبر اکرم (ص) به مقامات عالی معنوی رسیدند. این حدیث نشان می‌دهد که نماز، وسیله‌ی عروج روح مؤمن به سوی خداوند است.' },
+  { cat:'نماز و عبادت', text:'أَحَبُّ الْأَعْمالِ إِلَى اللهِ الصَّلاةُ لِوَقْتِها', trans:'محبوب‌ترین کارها نزد خداوند، نماز در وقت خود است.', src:'پیامبر اکرم (ص) — الکافی، ج ۳، ص ۲۶۴', story:'مردی از پیامبر (ص) پرسید: کدام عمل نزد خداوند محبوب‌تر است؟ پیامبر (ص) فرمودند: «نماز در وقت خود».' },
+  { cat:'نماز و عبادت', text:'أَوَّلُ ما یُحاسَبُ بِهِ الْعَبْدُ الصَّلاةُ', trans:'نخستین چیزی که بنده در قیامت به آن محاسبه می‌شود، نماز است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۸۲، ص ۲۰۲', story:'این حدیث از پیامبر اکرم (ص) نقل شده که در قیامت ابتدا از نماز بندگان سؤال می‌شود.' },
+  { cat:'نماز و عبادت', text:'اَلصَّلاةُ نُورٌ', trans:'نماز، نور است.', src:'پیامبر اکرم (ص) — من لا یحضره الفقیه', story:'پیامبر اکرم (ص) در وصف نماز فرمودند: «نماز نور است». نماز، هم در دنیا دل انسان را روشن می‌کند و هم در قیامت.' },
+  { cat:'نماز و عبادت', text:'قُرَّةُ عَیْنی فِی الصَّلاةِ', trans:'روشنی چشم من در نماز است.', src:'پیامبر اکرم (ص) — الکافی، ج ۵، ص ۳۲۱', story:'پیامبر اکرم (ص) این جمله را فرمودند که نشان می‌دهد نماز برای ایشان نه یک تکلیف، بلکه لذت و آرامش قلبی بوده است.' },
+  { cat:'اخلاق و رفتار', text:'ما مِنْ شَیْءٍ أَثْقَلُ فِی الْمیزانِ مِنْ حُسْنِ الْخُلُقِ', trans:'هیچ چیز در ترازوی اعمال، سنگین‌تر از خوش‌اخلاقی نیست.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۹۹', story:'پیامبر اکرم (ص) همواره بر حسن خلق تأکید داشتند. در روایات متعدد آمده که خوش‌اخلاقی، ایمان را کامل می‌کند.' },
+  { cat:'اخلاق و رفتار', text:'اَلْکَلِمَةُ الطَّیِّبَةُ صَدَقَةٌ', trans:'سخن نیکو، صدقه است.', src:'پیامبر اکرم (ص) — صحیح بخاری و الکافی', story:'پیامبر (ص) فرمودند که فقط انفاق مال صدقه نیست؛ بلکه هر سخن نیکو که بر زبان جاری می‌شود، برای گوینده صدقه محسوب می‌شود.' },
+  { cat:'اخلاق و رفتار', text:'تَبَسُّمُکَ فی وَجْهِ أَخیکَ صَدَقَةٌ', trans:'لبخند تو در چهره‌ی برادرت، صدقه است.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۰۳', story:'این حدیث زیبا از پیامبر (ص) نشان می‌دهد که حتی کوچک‌ترین کارهای محبت‌آمیز نیز پاداش دارد.' },
+  { cat:'اخلاق و رفتار', text:'إِنَّ الرِّفْقَ لَمْ یَکُنْ فی شَیْءٍ إِلّا زانَهُ، وَ لا نُزِعَ مِنْ شَیْءٍ إِلّا شانَهُ', trans:'مدارا در هیچ چیز نبود مگر آنکه آن را آراست، و از هیچ چیز گرفته نشد مگر آنکه آن را زشت کرد.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۱۹', story:'پیامبر اکرم (ص) در این حدیث، رفق و مدارا را زیور همه چیز معرفی می‌کند.' },
+  { cat:'اخلاق و رفتار', text:'عَلَیْکُمْ بِالصِّدْقِ، فَإِنَّ الصِّدْقَ یَهْدی إِلَى الْبِرِّ، وَ الْبِرُّ یَهْدی إِلَى الْجَنَّةِ', trans:'بر شما باد به راستگویی، که راستگویی به نیکی هدایت می‌کند و نیکی به بهشت می‌رساند.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۰۴', story:'پیامبر (ص) همواره امت را به راستگویی توصیه می‌کردند و دروغ را مادر همه گناهان می‌دانستند.' },
+  { cat:'اخلاق و رفتار', text:'أَکْمَلُ الْمُؤْمِنینَ إِیماناً أَحْسَنُهُمْ خُلُقاً', trans:'کامل‌ترین مؤمنان از نظر ایمان، خوش‌اخلاق‌ترین آن‌هاست.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۰۳', story:'پیامبر اکرم (ص) معیار کامل بودن ایمان را خوش‌اخلاقی معرفی می‌کنند.' },
+  { cat:'اخلاق و رفتار', text:'خَیْرُ النّاسِ مَنْ یَنْفَعُ النّاسَ', trans:'بهترین مردم کسی است که به دیگران سود می‌رساند.', src:'امام رضا (ع) — بحارالانوار، ج ۷۸، ص ۳۵۲', story:'امام رضا (ع) این حدیث را از پیامبر اکرم (ص) نقل فرموده‌اند که بهترین مردم کسی است که به دیگران نفع برساند.' },
+  { cat:'اخلاق و رفتار', text:'إِنَّ اللهَ یُحِبُّ الرِّفْقَ وَ یُعْطی عَلَی الرِّفْقِ ما لا یُعْطی عَلَی الْعُنْفِ', trans:'همانا خداوند مدارا را دوست دارد و بر اثر مدارا چیزهایی می‌بخشد که به سبب خشونت نمی‌بخشد.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۱۹', story:'پیامبر اکرم (ص) در این حدیث شریف، پاداش رفق را بسیار بیشتر از عُنف و خشونت معرفی می‌کند.' },
+  { cat:'اخلاق و رفتار', text:'إِنَّ الْعَبْدَ لَیُدْرِکُ بِحُسْنِ خُلُقِهِ دَرَجَةَ الصّائِمِ الْقائِمِ', trans:'همانا بنده با خوش‌اخلاقی خود به درجه‌ی روزه‌دار شب‌زنده‌دار می‌رسد.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۰۷', story:'پیامبر (ص) فرمودند کسی که خوش‌اخلاق است، به همان درجه‌ای می‌رسد که روزه‌دار شب‌زنده‌دار.' },
+  { cat:'علم و دانش', text:'طَلَبُ الْعِلْمِ فَریضَةٌ عَلى کُلِّ مُسْلِمٍ', trans:'جستن دانش، بر هر مسلمانی واجب است.', src:'پیامبر اکرم (ص) — الکافی، ج ۱، ص ۳۰', story:'پیامبر اکرم (ص) در این حدیث، یادگیری دانش را بر همه مسلمانان واجب کرده‌اند.' },
+  { cat:'علم و دانش', text:'مَنْ سَلَکَ طَریقاً یَطْلُبُ فیهِ عِلْماً، سَلَکَ اللهُ بِهِ طَریقاً إِلَى الْجَنَّةِ', trans:'هر کس راهی را برای جستن دانش بپیماید، خداوند او را در راهی به سوی بهشت قرار می‌دهد.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۱، ص ۱۷۷', story:'پیامبر اکرم (ص) فرمودند که حتی گام برداشتن در راه علم، عبادت محسوب می‌شود.' },
+  { cat:'علم و دانش', text:'اَلْحِکْمَةُ ضالَّةُ الْمُؤْمِنِ، فَخُذْها حَیْثُ وَجَدْتَها', trans:'حکمت، گمشده‌ی مؤمن است؛ پس هر جا آن را یافت، بگیرد.', src:'امام علی (ع) — نهج البلاغه، حکمت ۸۰', story:'امام علی (ع) می‌فرمایند که مؤمن باید در جستجوی حکمت باشد، حتی اگر آن را نزد فردی غیرمؤمن بیابد.' },
+  { cat:'علم و دانش', text:'اَلْعِلْمُ نُورٌ یَقْذِفُهُ اللهُ فی قَلْبِ مَنْ یَشاءُ', trans:'علم، نوری است که خداوند آن را در قلب هر کس که بخواهد می‌افکند.', src:'پیامبر اکرم (ص) — مصباح الشریعة', story:'علم در این حدیث به نور تشبیه شده است. همان‌طور که نور مسیر را روشن می‌کند، علم نیز راه سعادت را روشن می‌سازد.' },
+  { cat:'علم و دانش', text:'مَنْ تَعَلَّمَ عِلْماً فَعَمِلَ بِهِ، عَلَّمَهُ اللهُ ما لَمْ یَعْلَمْ', trans:'هر کس دانشی بیاموزد و به آن عمل کند، خداوند آنچه را نمی‌داند به او می‌آموزد.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۲، ص ۲۹', story:'این حدیث، رمز گشوده شدن درهای علم را نشان می‌دهد: ابتدا یادگیری، سپس عمل به آن.' },
+  { cat:'علم و دانش', text:'اَلْعِلْمُ وِراثَةٌ کَریمَةٌ', trans:'دانش، میراثی ارزشمند است.', src:'امام علی (ع) — غرر الحکم', story:'امام علی (ع) دانش را بهترین میراث و ارث می‌داند، چراکه ثروت‌های مادی از بین می‌روند ولی علم همیشه با انسان می‌ماند.' },
+  { cat:'روابط اجتماعی', text:'اَلْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسانِهِ وَ یَدِهِ', trans:'مسلمان کسی است که مسلمانان از زبان و دست او در امان باشند.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۲۳۴', story:'این حدیث معیار مسلمانی را رفتار با دیگران معرفی می‌کند، نه فقط ظاهر.' },
+  { cat:'روابط اجتماعی', text:'لا یُؤْمِنُ أَحَدُکُمْ حَتّى یُحِبَّ لِأَخیهِ ما یُحِبُّ لِنَفْسِهِ', trans:'هیچ‌یک از شما مؤمن نیست تا آنکه برای برادر خود همان را دوست بدارد که برای خود دوست می‌دارد.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۲۳۵', story:'پیامبر (ص) ملاک کامل بودن ایمان را محبت به دیگران همچون خود می‌داند.' },
+  { cat:'روابط اجتماعی', text:'اَلْمُؤْمِنُ لِلْمُؤْمِنِ کَالْبُنْیانِ یَشُدُّ بَعْضُهُ بَعْضاً', trans:'مؤمن نسبت به مؤمن دیگر همچون بنای محکمی است که اجزایش یکدیگر را تقویت می‌کنند.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۶۵', story:'پیامبر اکرم (ص) با تشبیه جامعه‌ی مؤمنان به بنای محکم، بر ضرورت وحدت و همبستگی تأکید کردند.' },
+  { cat:'روابط اجتماعی', text:'مَنْ کانَ فی حاجَةِ أَخیهِ کانَ اللهُ فی حاجَتِهِ', trans:'هر کس در پی حاجت برادرش باشد، خداوند در پی حاجت او خواهد بود.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۹۳', story:'پیامبر (ص) در این حدیث، خدمت به خلق را از بزرگ‌ترین عبادات دانسته‌اند.' },
+  { cat:'روابط اجتماعی', text:'خَیْرُکُمْ خَیْرُکُمْ لِأَهْلِهِ', trans:'بهترین شما کسی است که برای خانواده‌اش بهتر باشد.', src:'پیامبر اکرم (ص) — الکافی، ج ۵، ص ۵۰۵', story:'پیامبر اکرم (ص) این حدیث را در توصیه به مردان فرمودند که بهترین مردان کسانی هستند که در خانه با همسر و فرزندانشان خوش‌رفتار باشند.' },
+  { cat:'روابط اجتماعی', text:'اَلْمُؤْمِنُ مِرْآةُ الْمُؤْمِنِ', trans:'مؤمن، آینه‌ی مؤمن است.', src:'پیامبر اکرم (ص) — الکافی، ج ۲، ص ۱۶۹', story:'پیامبر اکرم (ص) مؤمن را به آینه تشبیه کرده‌اند. همان‌طور که آینه عیب‌ها را نشان می‌دهد، مؤمنان نیز باید عیوب هم را با نرمی نشان دهند.' },
+  { cat:'خودسازی', text:'حاسِبُوا أَنْفُسَکُمْ قَبْلَ أَنْ تُحاسَبُوا', trans:'پیش از آنکه به حساب شما رسیدگی کنند، خود به حساب خویش رسیدگی کنید.', src:'امام علی (ع) — بحارالانوار، ج ۷۰، ص ۶۴', story:'امام علی (ع) بر ضرورت محاسبه‌ی نفس تأکید فراوان داشتند. هر شب پیش از خواب، باید اعمال روز گذشته را بررسی کنیم.' },
+  { cat:'خودسازی', text:'لا تَکُنْ عَبْدَ غَیْرِکَ وَ قَدْ جَعَلَکَ اللهُ حُرّاً', trans:'بنده‌ی دیگری نباش، در حالی که خداوند تو را آزاد آفریده است.', src:'امام علی (ع) — نهج البلاغه، نامه ۳۱', story:'امام علی (ع) در نامه به فرزندش امام حسن (ع) این جمله را نوشت. مراد این است که با طمع، بندگی انسان‌ها را نکن.' },
+  { cat:'خودسازی', text:'أَشَدُّ الْجِهادِ جِهادُ النَّفْسِ', trans:'سخت‌ترین جهاد، جهاد با نفس است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۶۷، ص ۶۵', story:'پیامبر اکرم (ص) پس از بازگشت از جنگی، به یاران فرمودند: «از جهاد اصغر به جهاد اکبر بازگشتید».' },
+  { cat:'خودسازی', text:'أَعْدَى عَدُوِّکَ نَفْسُکَ الَّتی بَیْنَ جَنْبَیْکَ', trans:'دشمن‌ترین دشمن تو، نفس تو است که در میان دو پهلوی تو قرار دارد.', src:'امام علی (ع) — غرر الحکم', story:'امام علی (ع) بر این نکته تأکید می‌فرمایند که خطرناک‌ترین دشمن انسان، در درون خود اوست.' },
+  { cat:'خودسازی', text:'مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ', trans:'هر کس خود را شناخت، همانا پروردگار خود را شناخته است.', src:'حدیث مشهور — بحارالانوار، ج ۲، ص ۳۲', story:'این حدیث مشهور که در منابع عرفانی و فلسفی فراوان به آن استناد شده، رابطه‌ی عمیقی بین خودشناسی و خداشناسی برقرار می‌کند.' },
+  { cat:'خودسازی', text:'اَلزُّهْدُ فِی الدُّنْیا لَیْسَ بِتَحْریمِ الْحَلالِ، وَ لکِنْ أَنْ لا یَکُونَ ما فِی یَدَیْکَ أَوْثَقَ بِهِ مِمّا فِی یَدِ اللهِ', trans:'زهد در دنیا به حرام کردن حلال نیست؛ بلکه به این است که آنچه در دست داری، از آنچه نزد خداست مطمئن‌تر نباشد.', src:'امام صادق (ع) — معانی الأخبار', story:'امام صادق (ع) در تعریف زهد فرمودند که زهد به معنای ترک دنیا نیست، بلکه دل نبستن به آن است.' },
+  { cat:'معاد و قیامت', text:'اَلدُّنْیا سِجْنُ الْمُؤْمِنِ وَ جَنَّةُ الْکافِرِ', trans:'دنیا زندان مؤمن و بهشت کافر است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۷۴، ص ۱۷۸', story:'پیامبر اکرم (ص) دنیا را برای مؤمن همچون زندان توصیف می‌کند، چراکه مؤمن در دنیا با محدودیت‌های شرعی دست و پنجه نرم می‌کند.' },
+  { cat:'معاد و قیامت', text:'اَلْقَبْرُ رَوْضَةٌ مِنْ رِیاضِ الْجَنَّةِ أَوْ حُفْرَةٌ مِنْ حُفَرِ النّارِ', trans:'قبر یا باغی از باغ‌های بهشت است یا گودالی از گودال‌های آتش.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۶، ص ۲۱۸', story:'پیامبر (ص) در این حدیث به عالم برزخ اشاره می‌کنند که میان دنیا و آخرت است.' },
+  { cat:'معاد و قیامت', text:'مَنْ ماتَ فَقَدْ قامَتْ قِیامَتُهُ', trans:'هر کس بمیرد، همانا قیامت او برپا شده است.', src:'امام علی (ع) — بحارالانوار، ج ۶، ص ۱۳۳', story:'امام علی (ع) می‌فرمایند که قیامت هر شخص با مرگ او آغاز می‌شود.' },
+  { cat:'معاد و قیامت', text:'کُنْ فِی الدُّنْیا کَأَنَّکَ غَریبٌ أَوْ عابِرُ سَبیلٍ', trans:'در دنیا همچون غریبی یا رهگذری باش.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۷۴، ص ۱۹۰', story:'پیامبر (ص) در توصیه به ابوذر غفاری این جمله را فرمودند. مراد این است که به دنیا دل نبندیم.' },
+  { cat:'معاد و قیامت', text:'لا تَبِعْ آخِرَتَکَ بِدُنْیاکَ', trans:'آخرت خود را به دنیایت نفروش.', src:'امام علی (ع) — غرر الحکم', story:'امام علی (ع) در این جمله کوتاه، بزرگ‌ترین خطر برای انسان را یادآوری می‌کند: فروختن آخرت به بهای دنیا.' },
+  { cat:'اهل بیت (ع)', text:'إِنّی تارِکٌ فیکُمُ الثَّقَلَیْنِ: کِتابَ اللهِ وَ عِتْرَتی أَهْلَ بَیْتی', trans:'من در میان شما دو چیز گران‌بها می‌گذارم: کتاب خدا و عترتم که اهل بیتم هستند.', src:'پیامبر اکرم (ص) — حدیث متواتر ثقلین', story:'حدیث ثقلین از متواترترین احادیث پیامبر (ص) است که در منابع شیعه و سنی از جمله صحیح مسلم، سنن ترمذی و مسند احمد نقل شده.' },
+  { cat:'اهل بیت (ع)', text:'اَلْحَسَنُ وَ الْحُسَیْنُ سَیِّدا شَبابِ أَهْلِ الْجَنَّةِ', trans:'حسن و حسین (علیهما السلام)، سرور جوانان اهل بهشت هستند.', src:'پیامبر اکرم (ص) — سنن ترمذی و بحارالانوار', story:'پیامبر اکرم (ص) بارها این سخن را در محبت به دو نوه‌ی عزیزشان، امام حسن و امام حسین (علیهما السلام) فرمودند.' },
+  { cat:'اهل بیت (ع)', text:'مَثَلُ أَهْلِ بَیْتی کَمَثَلِ سَفینَةِ نُوحٍ، مَنْ رَکِبَها نَجی وَ مَنْ تَخَلَّفَ عَنْها غَرِقَ', trans:'مَثَل اهل بیت من مانند کشتی نوح است؛ هر کس سوار آن شود نجات می‌یابد و هر کس از آن عقب بماند غرق می‌شود.', src:'پیامبر اکرم (ص) — بحارالانوار و مستدرک حاکم', story:'این حدیث مشهور، اهل بیت (ع) را به کشتی نوح تشبیه می‌کند. در طوفان فتنه‌ها، تنها راه نجات تمسک به اهل بیت (ع) است.' },
+  { cat:'اهل بیت (ع)', text:'أَهْلُ بَیْتی أَمانٌ لِأَهْلِ الْأَرْضِ', trans:'اهل بیت من، امان برای اهل زمین هستند.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۲۷، ص ۳۰۸', story:'پیامبر (ص) در این حدیث فرمودند که وجود اهل بیت (ع) سبب امنیت و برکت برای تمام اهل زمین است.' },
+  { cat:'اهل بیت (ع)', text:'مَنْ ماتَ عَلى حُبِّ آلِ مُحَمَّدٍ ماتَ شَهیداً', trans:'هر کس با محبت آل محمد (ص) بمیرد، شهید مرده است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۲۷، ص ۹۵', story:'پیامبر اکرم (ص) در این حدیث، محبت به اهل بیت (ع) را به مقام شهادت پیوند می‌زند.' },
+  { cat:'قرآن', text:'خَیْرُکُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَ عَلَّمَهُ', trans:'بهترین شما کسی است که قرآن را بیاموزد و به دیگران تعلیم دهد.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۸۹، ص ۱۸۶', story:'پیامبر اکرم (ص) یادگیری و آموزش قرآن را بهترین کار معرفی کرده‌اند.' },
+  { cat:'قرآن', text:'اَلْقُرْآنُ غِنىً لا فَقْرَ بَعْدَهُ', trans:'قرآن، ثروتی است که پس از آن فقری نیست.', src:'امام علی (ع) — نهج البلاغه، خطبه ۱۷۶', story:'امام علی (ع) قرآن را ثروتی بی‌پایان معرفی می‌کند که هر کس به آن تمسک جوید، هرگز فقیر نخواهد شد.' },
+  { cat:'قرآن', text:'أَهْلُ الْقُرْآنِ هُمْ أَهْلُ اللهِ وَ خاصَّتُهُ', trans:'اهل قرآن، اهل خدا و خاصان او هستند.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۸۹، ص ۱۷۷', story:'پیامبر (ص) در این حدیث، اهل قرآن را نزدیک‌ترین افراد به خداوند معرفی می‌کند.' },
+  { cat:'قرآن', text:'عَلَیْکَ بِالْقُرْآنِ، فَإِنَّهُ حَبْلُ اللهِ الْمَتینُ', trans:'بر تو باد به قرآن، که همانا ریسمان محکم خداوند است.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۹۲، ص ۱۷', story:'پیامبر اکرم (ص) قرآن را ریسمان محکم الهی معرفی می‌کند که یک سر آن به دست خداست و سر دیگر در دست ما.' },
+  { cat:'قرآن', text:'یُقالُ لِصاحِبِ الْقُرْآنِ: اقْرَأْ وَ ارْقَ', trans:'به صاحب قرآن گفته می‌شود: بخوان و بالا برو.', src:'پیامبر اکرم (ص) — بحارالانوار، ج ۸۹، ص ۲۰۰', story:'پیامبر (ص) فرمودند در قیامت به قاریان قرآن گفته می‌شود: «بخوان و بالا برو».' }
+];
+
+var categories = [
+  { name: 'همه', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>' },
+  { name: 'توحید و ایمان', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>' },
+  { name: 'نماز و عبادت', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M6 8h12M6 16h12"/></svg>' },
+  { name: 'اخلاق و رفتار', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' },
+  { name: 'علم و دانش', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' },
+  { name: 'روابط اجتماعی', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' },
+  { name: 'خودسازی', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>' },
+  { name: 'معاد و قیامت', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' },
+  { name: 'اهل بیت (ع)', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>' },
+  { name: 'قرآن', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="10" y1="6" x2="10" y2="14"/><line x1="14" y1="6" x2="14" y2="14"/></svg>' }
+];
+
+var currentFilter = 'همه';
+var currentSearch = '';
+var currentHadithIndex = -1;
+
+function renderCategories() {
+  var container = document.getElementById('categories');
+  container.innerHTML = '';
+  categories.forEach(function(cat) {
+    var count = (cat.name === 'همه') ? hadiths.length : hadiths.filter(function(h) { return h.cat === cat.name; }).length;
+    var btn = document.createElement('button');
+    btn.className = 'category' + (cat.name === currentFilter ? ' active' : '');
+    btn.innerHTML =
+      '<div class="category-icon">' + cat.icon + '</div>' +
+      '<h3>' + cat.name + '</h3>' +
+      '<span class="cat-count">' + count + ' حدیث</span>';
+    btn.addEventListener('click', function() {
+      currentFilter = cat.name;
+      document.querySelectorAll('.category').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderHadiths();
+    });
+    container.appendChild(btn);
+  });
+}
+
+function renderHadiths() {
+  var grid = document.getElementById('hadithGrid');
+  grid.innerHTML = '';
+  var filtered = hadiths.filter(function(h) {
+    var matchCat = (currentFilter === 'همه') || (h.cat === currentFilter);
+    var matchSearch = true;
+    if (currentSearch.trim() !== '') {
+      var q = currentSearch.trim().toLowerCase();
+      matchSearch =
+        h.text.toLowerCase().indexOf(q) !== -1 ||
+        h.trans.toLowerCase().indexOf(q) !== -1 ||
+        h.src.toLowerCase().indexOf(q) !== -1;
+    }
+    return matchCat && matchSearch;
+  });
+  document.getElementById('resultsText').innerHTML =
+    'نمایش <strong>' + filtered.length + '</strong> حدیث' +
+    (currentFilter === 'همه' ? ' از مجموع ' + hadiths.length : ' در موضوع «' + currentFilter + '»');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-message">هیچ حدیثی با این معیار یافت نشد.</div>';
+    return;
+  }
+  filtered.forEach(function(h, i) {
+    var card = document.createElement('article');
+    card.className = 'hadith-card';
+    card.style.animationDelay = (i * 40) + 'ms';
+    card.innerHTML =
+      '<span class="hadith-cat-badge">' + h.cat + '</span>' +
+      '<div class="hadith-quote">"</div>' +
+      '<p class="hadith-text">' + h.text + '</p>' +
+      '<p class="hadith-translation">' + h.trans + '</p>' +
+      '<div class="hadith-source">' +
+        '<div class="hadith-source-text">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>' +
+          '<span>' + h.src + '</span>' +
+        '</div>' +
+        '<span class="read-btn">بیشتر ←</span>' +
+      '</div>';
+    card.addEventListener('click', function() { openModal(h); });
+    grid.appendChild(card);
+  });
+}
+
+function openModal(h) {
+  currentHadithIndex = hadiths.indexOf(h);
+  document.getElementById('modalCat').textContent = h.cat;
+  document.getElementById('modalArabic').textContent = h.text;
+  document.getElementById('modalTranslation').textContent = h.trans;
+  document.getElementById('modalSource').textContent = h.src;
+  var storySection = document.getElementById('modalStorySection');
+  if (h.story) {
+    storySection.style.display = 'block';
+    document.getElementById('modalStory').textContent = h.story;
+  } else {
+    storySection.style.display = 'none';
+  }
+  updateNavButtons();
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navigateHadith(dir) {
+  var newIndex = currentHadithIndex + dir;
+  if (newIndex >= 0 && newIndex < hadiths.length) {
+    openModal(hadiths[newIndex]);
+  }
+}
+
+function updateNavButtons() {
+  document.getElementById('prevBtn').disabled = currentHadithIndex <= 0;
+  document.getElementById('nextBtn').disabled = currentHadithIndex >= hadiths.length - 1;
+}
+
+function copyCurrentHadith() {
+  var h = hadiths[currentHadithIndex];
+  if (!h) return;
+  var text = h.text + '\n\n' + h.trans + '\n\nمنبع: ' + h.src;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.querySelector('.action-copy');
+    var old = btn.innerHTML;
+    btn.innerHTML = '✓ کپی شد';
+    setTimeout(function() { btn.innerHTML = old; }, 1500);
+  });
+}
+
+function shareCurrentHadith(platform) {
+  var h = hadiths[currentHadithIndex];
+  if (!h) return;
+  var text = 'حدیث:\n' + h.text + '\n\n' + h.trans + '\n\nمنبع: ' + h.src;
+  var enc = encodeURIComponent(text);
+  var url = '';
+  if (platform === 'bale') url = 'https://ble.ir/share/url?text=' + enc;
+  else if (platform === 'telegram') url = 'https://t.me/share/url?url=&text=' + enc;
+  else if (platform === 'whatsapp') url = 'https://wa.me/?text=' + enc;
+  if (url) window.open(url, '_blank');
+}
+
+document.getElementById('searchBox').addEventListener('input', function(e) {
+  currentSearch = e.target.value;
+  renderHadiths();
+});
+
+function showRandomHadith() {
+  var random = hadiths[Math.floor(Math.random() * hadiths.length)];
+  openModal(random);
+}
+
+function setDailyHadith() {
+  var dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+  var h = hadiths[dayOfYear % hadiths.length];
+  document.getElementById('dailyText').textContent = '«' + h.text + '»';
+  document.getElementById('dailyTrans').textContent = h.trans;
+  document.getElementById('dailySrc').textContent = '— ' + h.src;
+}
+
+document.getElementById('modalOverlay').addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeModal(); closeMenu(); }
+  if (document.getElementById('modalOverlay').classList.contains('open')) {
+    if (e.key === 'ArrowRight') navigateHadith(-1);
+    if (e.key === 'ArrowLeft') navigateHadith(1);
+  }
+});
+
+var header = document.getElementById('header');
+var backTop = document.getElementById('back-to-top');
+var progress = document.getElementById('progress-bar');
+
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var percent = (scrollTop / docHeight) * 100;
+  if (progress) progress.style.width = percent + '%';
+  if (scrollTop > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+  if (scrollTop > 400) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}, { passive: true });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+(function createParticles() {
+  var container = document.getElementById('particles');
+  if (!container) return;
+  var count = window.innerWidth < 600 ? 12 : 30;
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (12 + Math.random() * 18) + 's';
+    p.style.animationDelay = (Math.random() * 12) + 's';
+    p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+    container.appendChild(p);
+  }
+})();
+
+renderCategories();
+renderHadiths();
+setDailyHadith();
+</script>
+
+</body>
+</html>
